@@ -10,6 +10,7 @@
 ### Instruction Set Architecture (ISA)
 
 Dipto Saha (50%)
+
 Tyler Pelayo (50%)
 
 ## CPU Implementation in Verilog

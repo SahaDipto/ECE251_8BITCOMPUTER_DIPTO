@@ -1,2 +1,15 @@
 # ECE251_8BITCOMPUTER_DIPTO_TYLER
-ECE251project
+
+## ISA
+
+## Memory Structure
+
+## Decoder
+
+## Controller
+
+## ALU
+
+## Block Diagram
+
+## Real Time Demonstration

@@ -8,7 +8,7 @@ Our ISA utilizes 16-bit instructions split into three distinct types: Register (
 ## Memory Structure
 ![memory](https://user-images.githubusercontent.com/73661624/168411484-789eac2c-4a5e-4749-b3dc-24fc11a2f668.jpg)
 
-Our computer utilizes a Harvard architecture memory topology. Our read only instruction memory consists of 256 16-bit lines to store commands from our 16 bit opcode and is word addressed. Our random access data memory consists of 256 8-bit lines to store data from our 4 8-bit general purpose registers and is byte addressed. Both memory arrays are initialized with zeros. The instruction memory is designed to be read beginning at 0 from the top and working downwards to 256. This was done to mimick the way in which we read assembly code in LEGV8.
+Our computer utilizes a Harvard architecture memory topology. Our read only instruction memory consists of 256 16-bit lines to store commands from our 16 bit opcode and is word addressed. Our random access data memory consists of 256 8-bit lines to store data from our 4 8-bit general purpose registers and is byte addressed. Both memory arrays are initialized with zeros. The instruction memory is designed to be read beginning at 0 from the top and working downwards to address 255. This was done to mimick the way in which we read assembly code in LEGV8.
 
 ## Decoder
 

@@ -1,0 +1,38 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000027068a162f0 .scope module, "wirereg" "wirereg" 2 1;
+ .timescale 0 0;
+RS_0000027068a66fb8 .resolv tri, v0000027068a16480_0, v0000027068a669d0_0;
+v0000027068a16900_0 .net8 "x", 0 0, RS_0000027068a66fb8;  2 drivers
+v0000027068a669d0_0 .var "y", 0 0;
+v0000027068a16480_0 .var "z", 0 0;
+    .scope S_0000027068a162f0;
+T_0 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027068a16480_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027068a16480_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027068a669d0_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0000027068a162f0;
+T_1 ;
+    %vpi_call 2 21 "$dumpfile", "garbage.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000027068a162f0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "verilogtesting.v";

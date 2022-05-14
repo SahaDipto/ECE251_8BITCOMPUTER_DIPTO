@@ -6,9 +6,8 @@ module Imem(
 
 reg [15:0] ram [255:0];
 
-initial begin
-    $readmemb("program.txt", ram);
-end
+initial $readmemb("program.txt", ram);
+
 
 assign instruc = ram[inA];
 

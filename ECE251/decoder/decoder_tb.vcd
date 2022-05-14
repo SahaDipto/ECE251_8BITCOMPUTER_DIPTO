@@ -1,0 +1,41 @@
+$date
+	Fri May 13 20:31:20 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decoder_tb $end
+$var wire 4 ! opcode [3:0] $end
+$upscope $end
+$scope module decoder_tb $end
+$var wire 3 " opcode2 [2:0] $end
+$upscope $end
+$scope module decoder_tb $end
+$var wire 16 # instruction [15:0] $end
+$upscope $end
+$scope module decoder_tb $end
+$var reg 16 $ rand [15:0] $end
+$upscope $end
+$scope module decoder_tb $end
+$var wire 8 % constant [7:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 %
+b1 #
+b1 $
+#20
+b1111 %
+b1111 #
+b1111 $

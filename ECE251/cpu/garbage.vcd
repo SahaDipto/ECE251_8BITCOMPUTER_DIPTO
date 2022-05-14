@@ -1,0 +1,25 @@
+$date
+	Fri May 13 19:38:16 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module wirereg $end
+$var wire 1 ! x $end
+$var reg 1 " y $end
+$var reg 1 # z $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1#
+x"
+x!
+$end
+#10
+0#
+#20
+1"

@@ -1,11 +1,17 @@
+//based on https://u-aizu.ac.jp/~yliu/teaching/comparch/lecture2.html
+
+//Alu opcode cases
 `define NOT 3'b000
 `define AND 3'b001
 `define OR 3'b010
-`define MUL_CMPI 3'b011
+
+
+//This was initially nand_cmpi, it was decided that multiply would be more important because you can implement Nand with not and and
+`define MUL_CMPI 3'b011 
 `define ADD 3'b100
 `define SUB 3'b101
-`define SIX 3'b110
-`define SVN 3'b111
+`define SIX 3'b110//LSR for R, LDUR for I
+`define SVN 3'b111//LSL for R, STUR for I
 
 module ALU(
     input [3:0] opcase,
@@ -22,7 +28,7 @@ module ALU(
         `AND : out1 = A&B;
         `OR : out1 = A | B;
         `ADD : out1 = A + B;   
-        `SUB : out1 = A + (~B + 8'b00000001);     // A SUB B -> A ADD (-B)
+        `SUB : out1 = A - B; 
         default : out1 = 8'bzzzzzzzz;
         endcase
 
@@ -39,14 +45,15 @@ module ALU(
             `MUL_CMPI : begin
                 out1 = 8'bzzzzzzzz;
                 cmpreg = A - B;
+                cmpreg = (A!=B);
                 cmpflag[1] = (A>B);
-                cmpflag[0] = (cmpreg == 8'b00000000);
+                cmpflag[0] = (A != B);
             end
             endcase
         end
     end
 
 
-    assign flags[1] = cmpflag;  // Zero
+    assign flags = cmpflag;  // Zero
 
 endmodule

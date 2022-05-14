@@ -1,0 +1,5 @@
+This project was coded in VSCODE, using the iverilog compiler and the verilog compiler. 
+
+-iverilog -o (vvpfilename) file
+
+The previous command was used to execute the testbenches for every file in here.

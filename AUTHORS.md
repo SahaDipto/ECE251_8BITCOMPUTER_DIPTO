@@ -23,9 +23,9 @@ Tyler Pelayo (50%)
 
 ### Register File
 
-Dipto Saha (50%)
+Dipto Saha (75%)
 
-Tyler Pelayo (50%)
+Tyler Pelayo (25%)
 
 ### ALU
 

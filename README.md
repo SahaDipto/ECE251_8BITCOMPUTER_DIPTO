@@ -44,9 +44,9 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 >     SUBI X1,X1,#1             1101010100000001
 >     CMPI X1,#1                1011000100000001
 >     BLT  #3                   0000011000000010
->     
 >     END                       0000000000000000
 
+![image](https://user-images.githubusercontent.com/73661624/168452265-0b4e46d0-4c0b-4cec-b0b8-b38747cc71fc.png)
 
 For the first clock cycle, all registers are initialized to 0.
 

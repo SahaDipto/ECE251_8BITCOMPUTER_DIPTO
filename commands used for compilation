@@ -1,0 +1,11 @@
+the following code was compiled with Icarus verilog on the vscode powershell terminal using the following commands:
+
+iverilog -o filename.vvp filename.v
+
+For creating the vvp file.
+
+vvp filename.vvp 
+
+for creating the vcd file.
+
+gtkwave was used to show the waveforms in this code.

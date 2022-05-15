@@ -1,0 +1,14 @@
+The ISA was based on the ISA provided by Professor Marano for ECE251-CompArch class for spring 2022.
+
+
+Initially the computer had 8 registers, however that limited the number of immediate bits in our ISA. We chose to go with 4 registers as that would 
+reduce the number of selection bits for the registers. We also specified a shftamt, as we can only shift an 8 bit number up to 3 bits. 
+
+The code for the computer was a factorial program. It would calculate 5 factorial, store the value into memory, and then load it to a different register.
+This program showed R-type, Logic and Arithmetic I-type, LOAD, STORE, flags, and J-type branching. 
+
+The finish command was 16'b0000000000000000; which was based on how in C and C++ a function would return 0 to show that it successfully compiled.
+
+
+Suggestions for future project similar to this would be to first individually test the various submodules to make sure that they compile and run properly. This
+proved to be tremendously useful in reducing time spent on this project. Individually testing is much easier than testing collectively.  

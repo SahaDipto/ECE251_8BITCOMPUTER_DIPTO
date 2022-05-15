@@ -1,0 +1,38 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000021dc1926300 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000021dc1926490 .scope module, "Imem" "Imem" 3 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "inA";
+    .port_info 1 /OUTPUT 16 "instruc";
+L_0000021dc1926eb0 .functor BUFZ 16, L_0000021dc192ed10, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+v0000021dc1926b20_0 .net *"_ivl_0", 15 0, L_0000021dc192ed10;  1 drivers
+v0000021dc1926620_0 .net *"_ivl_2", 9 0, L_0000021dc192edb0;  1 drivers
+L_0000021dc19bbc38 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0000021dc19266c0_0 .net *"_ivl_5", 1 0, L_0000021dc19bbc38;  1 drivers
+o0000021dc1977068 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000021dc192eb30_0 .net "inA", 7 0, o0000021dc1977068;  0 drivers
+v0000021dc192ebd0_0 .net "instruc", 15 0, L_0000021dc1926eb0;  1 drivers
+v0000021dc192ec70 .array "ram", 0 255, 15 0;
+L_0000021dc192ed10 .array/port v0000021dc192ec70, L_0000021dc192edb0;
+L_0000021dc192edb0 .concat [ 8 2 0 0], o0000021dc1977068, L_0000021dc19bbc38;
+    .scope S_0000021dc1926490;
+T_0 ;
+    %vpi_call/w 3 10 "$readmemb", "program.txt", v0000021dc192ec70, 32'sb00000000000000000000000000000000 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "Imem.v";

@@ -21,6 +21,21 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 
 ## Block Diagram
 
+### R-Type Commands
+![image](https://user-images.githubusercontent.com/73661624/168452201-1d712ae4-0cfe-4675-b001-8bc99d854322.png)
+
+### I-Type - Mem Stur
+![image](https://user-images.githubusercontent.com/73661624/168452137-389b310e-73f0-4659-848d-9dc9363867bb.png)
+
+### I-Type - Mem Load
+![image](https://user-images.githubusercontent.com/73661624/168452161-40c78a57-1f48-4999-809f-53fe71863ec1.png)
+
+### I-Type - Arithmetic/Logical
+![image](https://user-images.githubusercontent.com/73661624/168452173-6792ac7d-51bf-41dc-96a2-0d81daa579c6.png)
+
+### J-Type Commands
+![image](https://user-images.githubusercontent.com/73661624/168452184-04d03241-b4f6-4555-8b66-33da1d18b91c.png)
+
 ## Real Time Demonstration (Factorial 5)
 >     ASM Language              Op Code
 >     ADDI X1,X0,#5             1100010000000101
@@ -29,6 +44,7 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 >     SUBI X1,X1,#1             1101010100000001
 >     CMPI X1,#1                1011000100000001
 >     BLT  #3                   0000011000000010
+>     
 >     END                       0000000000000000
 
 

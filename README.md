@@ -22,19 +22,17 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 ## Block Diagram
 
 ### R-Type Commands
-![image](https://user-images.githubusercontent.com/73661624/168452201-1d712ae4-0cfe-4675-b001-8bc99d854322.png)
+![image](https://user-images.githubusercontent.com/73661624/168454807-0177bf9d-5cbe-4426-a63a-260496325be0.png)
 
-### I-Type - Mem Stur
-![image](https://user-images.githubusercontent.com/73661624/168452137-389b310e-73f0-4659-848d-9dc9363867bb.png)
-
-### I-Type - Mem Load
-![image](https://user-images.githubusercontent.com/73661624/168452161-40c78a57-1f48-4999-809f-53fe71863ec1.png)
+### I-Type - Mem Access
+![image](https://user-images.githubusercontent.com/73661624/168454901-03550f38-7b67-4851-b287-599f16f7464a.png)
 
 ### I-Type - Arithmetic/Logical
-![image](https://user-images.githubusercontent.com/73661624/168452173-6792ac7d-51bf-41dc-96a2-0d81daa579c6.png)
+![image](https://user-images.githubusercontent.com/73661624/168454892-048b6675-5fc3-4053-a220-98611696dba3.png)
 
 ### J-Type Commands
-![image](https://user-images.githubusercontent.com/73661624/168452184-04d03241-b4f6-4555-8b66-33da1d18b91c.png)
+![image](https://user-images.githubusercontent.com/73661624/168454859-b61514a3-99ea-45dc-8d02-8ac88413422c.png)
+
 
 ## Real Time Demonstration (Factorial 5)
 >     ASM Language              Op Code

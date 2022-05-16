@@ -42,7 +42,7 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 >     SUBI X1,X1,#1             1101010100000001
 >     CMPI X1,#1                1011000100000001
 >     BGT  #2                   0000011000000010
->     STUR X2 #1                1111100000000001
+>     STUR X2 #1                1111001000000001
 >     LDUR X3 #1                1110110000000001
 >     END                       0000000000000000
 

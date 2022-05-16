@@ -36,7 +36,7 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 
 ## Real Time Demonstration (Factorial 5)
 >     ASM Language              Op Code
->     ADDI X1,X0,#5             1100010000000101
+>     ADDI X1,X0,#5             1100010000000101 //line 0
 >     ADDI X2,X0,#1             1100100000000001
 >     MUL  X2,X1,X2             0011100110000000
 >     SUBI X1,X1,#1             1101010100000001
@@ -58,7 +58,7 @@ For the fifth cycle, the I-Type command SUBI is run, subtracting 1 from X1.
 
 For the sixth cycle, the I-Type command CMPI is run, comparing X1 to immediate value 1. This sets the flag that will be used in the branch loop structure.
 
-For the seventh cycle, the J-Type command BLT is run, checking the flag register for the condition in which to jump back to instruction line 3, or the MUL command. This effectively implements a loop. As shown, the controller enables a jump signal and resets the PC to position 3 everytime the branch condition is met. 
+For the seventh cycle, the J-Type command BLT is run, checking the flag register for the condition in which to jump back to instruction line 2, or the MUL command. This effectively implements a loop. As shown, the controller enables a jump signal and resets the PC to position 2 everytime the branch condition is met. 
  
 On the 18th cycle After it is done branching and determines that the value in X1 is not greater than the immediate 1 and does not branch. The resulting output, hex 78, can be seen stored in X2. This is factorial 5, or 120 decimal. 
 

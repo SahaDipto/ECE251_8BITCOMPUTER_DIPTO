@@ -8,13 +8,13 @@ The name of our ISA is called the "DiptoAndTyler16bitISA." Our ISA utilizes 16-b
 ## Memory Structure
 ![memory](https://user-images.githubusercontent.com/73661624/168411484-789eac2c-4a5e-4749-b3dc-24fc11a2f668.jpg)
 
-Our computer utilizes a Harvard architecture memory topology, it has separate instruction and data memory. Our read only instruction memory consists of 256 16-bit lines to store commands from our 16 bit opcode and is word addressed. Our random access data memory consists of 256 8-bit lines to store data from our 4 8-bit general purpose registers and is byte addressed. Both memory arrays are initialized with zeros. The instruction memory is designed to be read beginning at 0 from the top and working downwards to address 255. This was done to mimick the way in which we read assembly code in LEGV8.
+Our computer utilizes a Harvard architecture memory topology, it has separate instruction and data memory. Our read only instruction memory consists of 256 16-bit lines to store commands from our 16 bit opcode and is word addressed. Our random access data memory consists of 256 8-bit lines to store data from our 4 8-bit general purpose registers and is byte addressed. Both memory arrays are initialized with zeros. The instruction memory is designed to be read beginning at 0 from the top and working downwards to address 255. This was done to mimick the way in which we read assembly code in LEGV8. We also have 4 8-bit register files that are all preset to 0.
 
 ## Decoder
 Our decoder splits up the inputted command according to our ISA. After it determines the command type, it feeds the command through a case switch statement to determine how the controller behaves. 
 
 ## Controller
-Our controller manages both the timings and data access of the other modules in the computer. After the decoder processes a 16-bit instruction, the controller enables or disables the correct data paths based on the type of command inputted. The controller handles register write enables, memory write enable, jump enable, and ret0. ret0 finishes the command and stops the computer. For I-types and R-types, the correct operation output is MUXed based on the decoded command. For J-types, the controller toggles the jump enable signal to change the PC in branching scenarios, and also accepts flags that are then used in the conditional branching commands.
+Our controller manages both the timings and data access of the other modules in the computer. After the decoder processes a 16-bit instruction, the controller enables or disables the correct data paths based on the type of command inputted. The controller handles register write enables, memory write enable, jump enable, and ret0. ret0 finishes the command and stops the computer. For I-types and R-types, the correct operation output is MUXed based on the decoded command. For J-types, the controller toggles the jump enable signal to change the PC in branching scenarios, and also accepts flags that are then used in the conditional branching commands. The flags are preset to anyvalue. You must first preset the flag with CMPI before any conditional branch.
 
 ## ALU
 Our ALU performs logical or arithmetic operations on register data based on the opcode parsed into the controller. This module handles the execution for most of the R-type and I-type commands. 
@@ -41,7 +41,7 @@ Our ALU performs logical or arithmetic operations on register data based on the 
 >     MUL  X2,X1,X2             0011100110000000
 >     SUBI X1,X1,#1             1101010100000001
 >     CMPI X1,#1                1011000100000001
->     BGT  #3                   0000011000000010
+>     BGT  #2                   0000011000000010
 >     STUR X2 #1                1111100000000001
 >     LDUR X3 #1                1110110000000001
 >     END                       0000000000000000

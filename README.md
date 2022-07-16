@@ -1,4 +1,4 @@
-# ECE251_8BITCOMPUTER_DIPTO_TYLER
+# ECE251_8BITCOMPUTER_DIPTO
 
 ## ISA
 ![image](https://user-images.githubusercontent.com/73661624/168518660-31f5fd94-3834-4bee-b2ec-0a5caa68b658.png)
